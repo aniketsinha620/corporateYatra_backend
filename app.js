@@ -20,9 +20,15 @@ import userRouter from './routers/user.routers.js'
 import vehicleRouter from './routers/vehicle.router.js'
 import adminRouter from './routers/admin.router.js'
 
+
+app.get("/", (req, res) => {
+    res.send("Welcome to the API");
+});
+
 app.use("/api/v1/users", userRouter)
 app.use("/api/v1/admin", vehicleRouter)
 app.use("/api/v1/adminVerify", adminRouter)
+
 
 
 export { app }
